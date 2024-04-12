@@ -35,3 +35,4 @@ createBtnEl.addEventListener('click', () => {
 destroyBtnEl.addEventListener('click', () => {
   boxesEl.innerHTML = '';
 });
+// FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
