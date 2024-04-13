@@ -38,3 +38,4 @@ images.forEach(image => {
 });
 
 gallery.appendChild(fragment);
+// folder 07===
