@@ -1,4 +1,4 @@
-const inputEl = document.querySelector('input[type="number"]');
+const inputEl = document.querySelector('#input-number');
 const createBtnEl = document.querySelector('[data-create]');
 const destroyBtnEl = document.querySelector('[data-destroy]');
 const boxesEl = document.querySelector('#boxes');
@@ -25,15 +25,20 @@ function createBoxes(amount) {
   boxesEl.appendChild(fragment);
 }
 
+function destroyBoxes() {
+  while (boxesEl.firstChild) {
+    boxesEl.removeChild(boxesEl.firstChild);
+  }
+}
+
 createBtnEl.addEventListener('click', () => {
   const inputValue = inputEl.value;
 
   if (inputValue >= 1 && inputValue <= 100) {
+    destroyBoxes();
     createBoxes(inputValue);
     inputEl.value = '';
   }
 });
 
-destroyBtnEl.addEventListener('click', () => {
-  boxesEl.innerHTML = '';
-});
+destroyBtnEl.addEventListener('click', destroyBoxes);
